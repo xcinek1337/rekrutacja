@@ -1,113 +1,143 @@
-import Image from "next/image";
+import { Bebas_Neue, Roboto_Condensed, Roboto_Flex } from 'next/font/google';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const robotoFlex = Roboto_Flex({
+	subsets: ['latin'],
+	weight: ['400', '600'],
+});
+
+const bebas = Bebas_Neue({
+	subsets: ['latin'],
+	weight: ['400'],
+});
+const roboto_con = Roboto_Condensed({
+	subsets: ['latin'],
+	weight: ['400'],
+});
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<>
+			<header className='max-w-[1200px] mx-auto'>
+				<nav className='pt-4 flex justify-between gap-2.5 '>
+					<div>LOGO</div>
+					<ul className='flex items-center gap-6'>
+						<li>
+							<Link
+								className={`${robotoFlex.className}`}
+								href={'/'}
+							>
+								Galeria zdjęć
+							</Link>
+						</li>
+						<li>
+							<Link
+								className={`${robotoFlex.className}`}
+								href={'/'}
+							>
+								FaQ
+							</Link>
+						</li>
+					</ul>
+					<button className='btn btn-blue'>Zadzwoń do nas</button>
+				</nav>
+				<main>
+					<div className='flex flex-col gap-12 mt-[120px]'>
+						<h1 className={`${bebas.className} text-[76.29px] leading-[83.92px]`}>
+							SPRZEDAJEMY SAMOCHODY<br></br>Z EUROPY
+						</h1>
+						<p className={`${roboto_con.className} leading-6`}>
+							Kup komfortowy pojazd, aby każda podróż<br></br>była wyjątkowym przeżyciem.
+						</p>
+						<div className='flex gap-6'>
+							<button className='btn btn-blue'>Zobacz Zdjęcia</button>
+							<button className='btn btn-transparent'>Zadzwoń do nas</button>
+						</div>
+					</div>
+				</main>
+			</header>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+			<section className='mt-[362px] max-w-[1200px] mx-auto w-full'>
+				<div className='mt-20 flex flex-col gap-6'>
+					<div>
+						<span className={`${roboto_con.className} text-[21.5px] text-primaryBlue leading-[32.25px]`}>
+							Prezentacja Firmy
+						</span>
+						<div>
+							<span className={`${bebas.className} text-[40px]`}>ZOBACZ NASZĄ GALERIĘ ZDJĘĆ</span>
+						</div>
+					</div>
+					<div className='flex gap-12 '>
+						<button className={`${robotoFlex.className} text-primaryBlue`}>Samochody osobowe</button>
+						<button className={`${robotoFlex.className} text-black`}>Samochody dostawcze</button>
+					</div>
+				</div>
+			</section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+			<section className='mt-20  max-w-[1200px] mx-auto w-full'>
+				<div className='overflow-hidden flex gap-16'>
+					<Image
+						width={600}
+						height={446}
+						alt='car'
+						src={'/slider1.jpg'}
+					></Image>
+					<Image
+						width={600}
+						height={446}
+						alt='car'
+						src={'/slider2.jpeg'}
+					></Image>
+					<Image
+						width={600}
+						height={446}
+						alt='car'
+						src={'/slider3.webp'}
+					></Image>
+				</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+				<div className='mt-12 mb-20 flex justify-center items-center'>
+					<span>0 0 0 0 0</span>
+				</div>
+			</section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+			<section className='text-white bg-primaryBlack'>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+				<div className='py-[88px] max-w-[1200px] mx-auto w-full flex gap-20 justify-between'>
+
+					<article className='flex flex-col items-start gap-4'>
+						<span className={`text-[25px] ${bebas.className} `}>
+							Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.
+						</span>
+						<span className={`${roboto_con.className} text-sm`}>
+							Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec egestas, nisl vehicula feugiat
+							ornare, diam turpis efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+						</span>
+						<button className={`${roboto_con.className} text-sm border-b-[1.5px] border-white pb-1.5 `}>Rozwiń </button>
+					</article>
+
+					<article className='flex flex-col items-start gap-4'>
+						<span className={`text-[25px] ${bebas.className} `}>
+							Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.
+						</span>
+						<span className={`${roboto_con.className} text-sm`}>
+							Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec egestas, nisl vehicula feugiat
+							ornare, diam turpis efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et [...]
+						</span>
+						<button className={`${roboto_con.className} text-sm border-b-[1.5px] border-white pb-1.5 `}>Rozwiń </button>
+					</article>
+
+				</div>
+
+			</section>
+
+			<footer className='text-white  border-t-[1px]  border-white bg-primaryBlack'>
+				<div className={`max-w-[1200px]  mx-auto flex justify-between ${roboto_con.className}`}>
+					<button className='py-6 font-bold'>Cars Spot</button>
+					<button className='py-6 font-normal underline-offset-1 underline' >Polityka Prywatnośći</button>
+				</div>
+			</footer>
+		</>
+	);
 }
