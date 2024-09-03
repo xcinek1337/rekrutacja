@@ -38,7 +38,6 @@ export default function Slider() {
 		return () => window.removeEventListener('resize', updateItemsPerSlide);
 	}, []);
 
-	console.log(totalWidth);
 	const translateX = (slide - 1) * (totalWidth + 64);
 
 	return (
