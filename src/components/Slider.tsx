@@ -50,7 +50,7 @@ export default function Slider() {
 					{images.map((src, index) => (
 						<Image
 							key={index}
-							className='w-[250px] h-[250px] phablet:w-[446px] phablet:h-[350px]  laptop:w-[400px] laptop:h-[400px] xl:w-[600px] xl:h-[446px] '
+							className='w-[250px] h-[250px] phablet:w-[446px] phablet:h-[446px]  laptop:w-[400px] laptop:h-[400px] xl:w-[600px] xl:h-[446px] '
 							width={600}
 							height={446}
 							alt={`car`}
@@ -64,6 +64,9 @@ export default function Slider() {
 				{Array.from({ length: Math.ceil(images.length) }).map((_, index) => (
 					<button
 						key={index}
+						role='button'
+						aria-label={`Slide ${index + 1}`}
+						aria-controls='carousel'
 						className={`w-2 h-2 mx-1 rounded-full ${slide === index + 1 ? 'bg-primaryBlue' : 'bg-gray-200'}`}
 						onClick={() => setSlide(index + 1)}
 					></button>
