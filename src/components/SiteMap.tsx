@@ -5,7 +5,7 @@ import React from 'react';
 export default function SiteMap() {
 	return (
 		<section className='px-4 lg:px-0 text-white bg-primaryBlack'>
-			<div className='py-[88px] max-w-[1200px] mx-auto w-full flex-col md:flex-row gap-12 justify-between'>
+			<div className='py-[88px] max-w-[1200px] mx-auto w-full flex flex-col md:flex-row gap-12 justify-between'>
 				<article className='flex text-left flex-col items-start gap-4'>
 					<span className={`text-[25px] tracking-[-0.03em] ${bebas.className} `}>
 						Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.
