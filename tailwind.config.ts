@@ -13,6 +13,10 @@ const config: Config = {
 				primaryBlue: '#0147FF',
 				primaryBlack: '#282828',
 			},
+			screens: {
+				phablet: '500px',
+				laptop: '900px',
+			},
 		},
 	},
 	plugins: [],
