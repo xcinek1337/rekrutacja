@@ -1,6 +1,4 @@
-import { bebas, roboto_con } from '@/utils/fonts';
 import Image from 'next/image';
-import React from 'react';
 
 export default function Hero() {
 	return (
@@ -15,10 +13,10 @@ export default function Hero() {
 
 			<div className='z-2 max-w-[1200px] mx-auto'>
 				<div className='flex flex-col gap-12 mt-[120px]'>
-					<h1 className={`${bebas.className} text-5xl md:text-[76.29px] tracking-[-0.04em] md:leading-[83.92px]`}>
+					<h1 className={`font-bebasNeue text-5xl md:text-[76.29px] tracking-[-0.04em] md:leading-[83.92px]`}>
 						SPRZEDAJEMY SAMOCHODY<br></br>Z EUROPY
 					</h1>
-					<p className={`${roboto_con.className} leading-6`}>
+					<p className={`font-robotoCondensed leading-6`}>
 						Kup komfortowy pojazd, aby każda podróż<br></br>była wyjątkowym przeżyciem.
 					</p>
 					<div className='flex gap-6'>
@@ -29,7 +27,7 @@ export default function Hero() {
 			</div>
 
 			<Image
-				className='absolute -z-10 right-0 bottom-[92.63px]'
+				className='hero-image'
 				src={'/Hero.png'}
 				width={1064}
 				height={404.37}
@@ -37,7 +35,7 @@ export default function Hero() {
 			/>
 
 			<Image
-				className='absolute -z-10 right-0 bottom-[92.63px] opacity-70'
+				className='hero-image opacity-70'
 				src={'/cien.png'}
 				width={1064}
 				height={404.37}

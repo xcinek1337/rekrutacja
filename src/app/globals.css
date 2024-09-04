@@ -4,12 +4,18 @@
 
 @layer components {
 	.btn {
-		@apply text-[15px] px-6 py-3 rounded-[8px] font-semibold  hover:bg-blue-800 tracking-[-0.02em] transition-all  duration-300
+		@apply text-[15px] px-6 py-3 rounded-[8px] font-semibold  hover:bg-blue-800 tracking-[-0.02em] transition-all  duration-300;
 	}
 	.btn-blue {
 		@apply text-primaryWhite bg-primaryBlue;
 	}
 	.btn-transparent {
 		@apply text-primaryBlue border-[1px] border-primaryBlue bg-transparent;
+	}
+	.hover_border-b {
+		@apply absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-primaryBlue group-hover:w-full;
+	}
+	.hero-image {
+		@apply absolute -z-10 right-0 bottom-[92.63px];
 	}
 }

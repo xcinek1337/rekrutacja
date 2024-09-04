@@ -17,6 +17,12 @@ const config: Config = {
 				phablet: '500px',
 				laptop: '900px',
 			},
+			fontFamily: {
+				sans: ['var(--font-inter)'],
+				robotoFlex: ['var(--roboto-flex)'],
+				robotoCondensed: ['var(--roboto-condensed)'],
+				bebasNeue: ['var(--bebas-neue)'],
+			},
 		},
 	},
 	plugins: [],

@@ -1,6 +1,4 @@
-
 import Galerry from '@/components/Gallery';
-
 import Hero from '@/components/Hero';
 import SiteMap from '@/components/SiteMap';
 

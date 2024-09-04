@@ -25,7 +25,7 @@ export default function Slider() {
 				setTotalWidth(600);
 			} else if (screenWidth <= 1280 && screenWidth >= 900) {
 				setTotalWidth(400);
-			} else if (screenWidth <= 1280 && screenWidth >= 500) {
+			} else if (screenWidth <= 900 && screenWidth >= 500) {
 				setTotalWidth(446);
 			} else if (screenWidth < 500) {
 				setTotalWidth(250);
@@ -41,7 +41,7 @@ export default function Slider() {
 	const translateX = (slide - 1) * (totalWidth + 64);
 
 	return (
-		<section className='mt-20 w-[250px] phablet:w-[446px] laptop:w-[864px] xl:w-[1264px] mx-auto overflow-hidden'>
+		<div className='mt-20 w-[250px] phablet:w-[446px] laptop:w-[864px] xl:w-[1264px] mx-auto overflow-hidden'>
 			<div className='carousel-container overflow-hidden flex'>
 				<div
 					className='carousel-track flex transition-transform duration-500 ease-in-out gap-16'
@@ -72,6 +72,6 @@ export default function Slider() {
 					></button>
 				))}
 			</div>
-		</section>
+		</div>
 	);
 }
