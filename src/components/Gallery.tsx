@@ -28,9 +28,9 @@ export default function Gallery() {
 				</div>
 			</section>
 
-			<div className='max-w-[1200px] mx-auto w-full'>
+			<aside className='max-w-[1200px] mx-auto w-full'>
 				<Slider />
-			</div>
+			</aside>
 		</>
 	);
 }

@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Hero() {
 	return (
-		<main className='px-4 lg:px-0 relative border-[0.1px] border-transparent max-w-[1440px] min-h-[700px] md:min-h-[825px] w-full mx-auto'>
+		<article className='px-4 lg:px-0 relative border-[0.1px] border-transparent max-w-[1440px] min-h-[700px] md:min-h-[825px] w-full mx-auto'>
 			<Image
 				className='absolute w-[253px] h-[613px] -z-20 top-[-79px] right-[30px] md:w-[668.05px] md:h-[659px] md:right-[71.95px]'
 				src={'/Element.png'}
@@ -43,6 +43,6 @@ export default function Hero() {
 				height={404.37}
 				alt='cars'
 			/>
-		</main>
+		</article>
 	);
 }

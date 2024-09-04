@@ -1,4 +1,5 @@
 import { roboto_con } from '@/utils/fonts';
+
 import React from 'react';
 
 export default function Footer() {
